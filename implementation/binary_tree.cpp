@@ -15,8 +15,24 @@ public:
     }
 };
 
+Node push_to_tree(int d)
+{
+}
+
+void create_tree(Node *&root)
+{
+    int d;
+    cin >> d;
+    while (d != -1)
+    {
+        push_to_tree(d);
+        cin >> d;
+    }
+}
+
 int main()
 {
-    
+    Node *root;
+    create_tree(root);
     cout << "Kings";
 }
