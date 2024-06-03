@@ -77,13 +77,37 @@ def levelOrderTraversal(root):
                 q.append(None)
             
         
+def buildFromLevelOrder():
+    q = deque()
+    val = int(input("Enter data for root node: "))
+    if val == -1:
+        return None
+    root = Node(val)
+    q.append(root)
     
+    while(len(q)> 0):
+        front = q[0]
+        q.popleft()
+        
+        leftdata = int(input(f"enter data for left node of {front.data}:"))
+        
+        if leftdata != -1:
+            front.left = Node(leftdata)
+            q.append(front.left)
+            
+        rightdata = int(input(f"enter data for right node of {front.data}:"))
+        
+        if rightdata != -1:
+            front.right = Node(rightdata)
+            q.append(front.right)
+    
+    return root
  
 def main():
 
     # 1,3 ,7, -1, -1, 11, -1, -1, 5, 17, -1, -1, -1,
-    root = build_tree()
-    preorder(root)
+    root = buildFromLevelOrder()
+    levelOrderTraversal(root)
     # inorder(root)
     # levelOrderTraversal(root)
 
