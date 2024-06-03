@@ -1,2 +1,1 @@
-enter data:enter data: enter data: enter data: 10 
-5 21 
+[1, 2, 3, -5, -6, -7]
