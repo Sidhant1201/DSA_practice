@@ -30,3 +30,6 @@ class Solution:
         count= 1
         count = helper(root, count)
         return count
+    
+    
+#  time complexity is O(n) and space complexity is O(height)
