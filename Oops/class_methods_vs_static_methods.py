@@ -26,3 +26,5 @@ Circle.change_pi(3.146)
 
 print(f"New pi value for class {Circle.pi} and instance {circle_instance.pi}")
 print(f" New area {circle_instance.calculate_area()}")
+print(f"static method: {Circle.print_description()}", end=" ")
+print(f"static method thorugh instance {circle_instance.print_description()}", end=" ")
